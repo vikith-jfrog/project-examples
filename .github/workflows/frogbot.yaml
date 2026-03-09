@@ -5,7 +5,6 @@ on:
 permissions:
   pull-requests: write
   contents: write
-  security-events: write
 jobs:
   frogbot-scan:
     runs-on: ubuntu-latest
@@ -14,4 +13,4 @@ jobs:
         env:
           JF_URL: ${{ secrets.JF_URL }}
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.JF_GIT_TOKEN }}
